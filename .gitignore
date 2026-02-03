@@ -4,3 +4,7 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+.local/state/replit/agent/.agent_state_b157f53cf8309d8ebe20235e2b68f234eac15a6e.bin
+.local/state/replit/agent/.agent_state_main.bin
+.local/state/replit/agent/repl_state.bin
+.local/state/replit/agent/.latest.json
