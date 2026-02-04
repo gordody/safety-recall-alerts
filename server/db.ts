@@ -3,6 +3,10 @@ import pg from "pg";
 import * as schema from "@shared/schema";
 
 const { Pool } = pg;
+import { loadEnvFile } from "node:process"
+loadEnvFile('./config/.env');
+
+const connectionString = process.env.DATABASE_URL;
 
 if (!process.env.DATABASE_URL) {
   throw new Error(

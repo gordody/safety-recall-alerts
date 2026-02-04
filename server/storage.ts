@@ -7,10 +7,15 @@ import {
   type CreateProfileRequest,
   type ProfileResponse,
   type RecallAlertResponse,
-  type SourcesRefreshResponse,
   type UpdateProfileRequest,
 } from "@shared/schema";
 import { and, desc, eq, ilike, or, sql } from "drizzle-orm";
+
+export type SourcesRefreshResponse = {
+  refreshed: SourceKey[];
+  inserted: number;
+  updated: number;
+};
 
 export type SourceKey = "fda" | "cdc" | "foodsafety";
 

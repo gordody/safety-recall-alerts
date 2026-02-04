@@ -8,3 +8,4 @@ vite.config.ts.*
 .local/state/replit/agent/.agent_state_main.bin
 .local/state/replit/agent/repl_state.bin
 .local/state/replit/agent/.latest.json
+config/.env
