@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Settings2 } from "lucide-react";
+import { Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export function IosTopBar({
@@ -38,7 +38,7 @@ export function IosTopBar({
             active:translate-y-0 active:shadow-sm
           "
         >
-          <Settings2 className="h-5 w-5 text-foreground/80 transition-colors group-hover:text-foreground" />
+          <Settings className="h-5 w-5 text-foreground/80 transition-colors group-hover:text-foreground" />
         </Link>
       </div>
     </header>

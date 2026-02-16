@@ -190,17 +190,10 @@ export default function AlertsPage() {
           <GlassCard>
             <div className="flex items-start justify-between gap-4">
               <div>
-                <h2 className="text-2xl leading-tight">Know whats risky before you eat it.</h2>
+                <h2 className="text-2xl leading-tight">Food Alerts and more</h2>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  This is a prototype. We'll simulate daily alerts and personalize them to your
-                  location + allergies.
+                  Daily personalized alerts for your location + allergies.
                 </p>
-              </div>
-
-              <div className="hidden sm:block">
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-primary/12 via-accent/10 to-transparent ring-1 ring-border/60">
-                  <Sparkles className="h-6 w-6 text-foreground/70" />
-                </div>
               </div>
             </div>
 
