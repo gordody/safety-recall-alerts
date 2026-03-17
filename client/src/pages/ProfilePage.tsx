@@ -135,7 +135,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <AppShell>
+    <AppShell variant="light-blue">
       <Seo
         title="Recall Guard — Profile"
         description="Set your location, allergies, and dietary restrictions to get relevant recall alerts."

@@ -151,7 +151,7 @@ export default function AlertsPage() {
   const states = metaQ.data?.states ?? [];
 
   return (
-    <AppShell>
+    <AppShell variant="light-green">
       <Seo
         title="Recall Guard — Alerts"
         description="Personalized food recall alerts matched to your location, allergies, and dietary restrictions."
