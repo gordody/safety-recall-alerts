@@ -2,11 +2,12 @@
 	"version": "2.0.0",
 	"tasks": [
     {
-      "type": "npm",
-      "script": "build",
+      "type": "shell",
+      "command": "pnpm",
+      "args": ["build"],
       "group": "build",
       "problemMatcher": [],
-      "label": "npm: build",
+      "label": "pnpm: build",
       "detail": "tsx script/build.ts"
     }
   ]

@@ -1,11 +1,21 @@
 Recall Alert App
 
-The purpose of the app is to alert users about food, pet food, cosmetics or drug related recalls and warnings from the FDA.
+The purpose of the app is to alert users about food, pet food, cosmetics or drug related recalls and warnings from the FDA and USDA / FSIS
 The continuation would be to also include recalls from the CDC, recalls from generic consumer products like fridges, tv-s, cars, etc.
 
-The FDA alert portion of the app would look like this:
+The FDA / USDA alert portion of the app would look like this:
 
-This is a server - client app that saves the users and their preferences on the backend. Note that we could potentially create the app on the client-side only, if we can query the FDA API on the client side only and save the user alerts in a way that gets backed up to a device-specific cloud location, similarly to apple notes, contacts, web bookmarks etc.
+This is a client app that saves the users and their preferences in the phone preferences area: we save the user alerts in a way that gets backed up to a device-specific cloud location, similarly to apple notes, contacts, web bookmarks etc.
+
+Notifications:
+Use local notifications
+iPhone:
+https://developer.apple.com/documentation/usernotifications/scheduling-a-notification-locally-from-your-app
+
+Android:
+https://developer.android.com/develop/ui/views/notifications/build-notification
+https://medium.com/@munbonecci/how-to-launch-a-local-notification-in-android-afaa47eb1d1c
+https://developer.android.com/develop/background-work/background-tasks/persistent
 
 OpenFDA API-s
 https://open.fda.gov/apis
@@ -68,5 +78,33 @@ https://api.fda.gov/download.json
 OpenFDA site source code:
 https://github.com/FDA/openfda/
 
+Enforcement Report API - recommended source of alerts:
+https://api.fda.gov/food/enforcement.json
+https://api-datadashboard.fda.gov/v1/<endpoint>
+
+Docs:
+https://datadashboard.fda.gov/oii/api/index.htm
+
+Endpoints:
+The available endpoints (each with their own field definition pages) are:
+/v1/inspections_classifications FoodSafety.gov
+/v1/inspections_citations Recalls.gov
+/v1/compliance_actions Fda — this is the one most relevant to recalls
+/v1/import_refusals CDC
+
+
 Initial implementation:
 Given that the FDA DB Allows 1000 requests / day / source IP, individual devices could make 1 query every morning to check for the specified criteria. If a result is found, generate an alert.
+
+
+USDA / FSIS data:
+
+https://www.fsis.usda.gov/science-data/developer-resources/recall-api
+
+https://www.fsis.usda.gov/fsis/api/recall/v/1
+
+API docs:
+https://www.fsis.usda.gov/sites/default/files/media_file/documents/Recall-API-documentation.pdf
+
+
+Setup: pnpm 

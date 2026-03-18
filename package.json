@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "packageManager": "pnpm@10.30.3",
   "scripts": {
     "dev": "NODE_ENV=development OPEN_FDA_API_KEY=$OPEN_FDA_API_KEY PORT=8088 tsx server/index.ts",
     "build": "tsx script/build.ts",
